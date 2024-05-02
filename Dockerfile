@@ -1,9 +1,5 @@
-# Use Ubuntu 22.04 as base image
-FROM ubuntu:22.04
-
-# Install curl and Node.js dependencies
-RUN apt-get update \
-    && apt-get install -y curl nodejs npm
+# Use Node.js 12 as base image
+FROM node:12
 
 # Set working directory inside the container
 WORKDIR /app
@@ -22,4 +18,3 @@ EXPOSE 3000
 
 # Command to run the application
 CMD ["npm", "start"]
-
