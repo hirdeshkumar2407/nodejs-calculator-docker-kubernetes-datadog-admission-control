@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: datadog-agent-postgres-config
+  namespace: your-namespace
+data:
+  postgres.yaml: |-
+    init_config:
+
+    instances:
+      - dbm: true
+        host: 192.168.49.1
+        port: 5432
+        username: datadog
+        password: 'abc.123
