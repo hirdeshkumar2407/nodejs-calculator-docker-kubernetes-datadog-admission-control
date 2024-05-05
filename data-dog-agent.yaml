@@ -16,12 +16,14 @@ spec:
     apm:
       enabled: true
 
+  # Define volumes and volumeMounts directly under 'spec'
+  volumes:
+    - name: datadog-agent-postgres-config
+      configMap:
+        name: datadog-agent-postgres-config
+
   template:
     spec:
-      volumes:
-        - name: datadog-agent-postgres-config
-          configMap:
-            name: datadog-agent-postgres-config
       containers:
         - name: datadog-agent
           volumeMounts:
