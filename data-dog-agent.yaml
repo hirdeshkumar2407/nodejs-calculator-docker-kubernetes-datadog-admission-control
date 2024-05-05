@@ -11,17 +11,9 @@ spec:
       apiSecret:
         secretName: datadog-secret
         keyName: api-key
-
   features:
     apm:
       enabled: true
-
-  # Define volumes and volumeMounts directly under 'spec'
-  volumes:
-    - name: datadog-agent-postgres-config
-      configMap:
-        name: datadog-agent-postgres-config
-
   template:
     spec:
       containers:
@@ -30,3 +22,7 @@ spec:
             - name: datadog-agent-postgres-config
               mountPath: /etc/datadog-agent/conf.d/postgres.d
               readOnly: true
+      volumes:
+        - name: datadog-agent-postgres-config
+          configMap:
+            name: datadog-agent-postgres-config
