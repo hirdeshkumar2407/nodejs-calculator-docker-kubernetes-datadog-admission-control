@@ -2,6 +2,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nodejs-calculator
+  labels:
+    tags.datadoghq.com/env: "prod"
+    tags.datadoghq.com/service: "nodejs-calculator"
+    tags.datadoghq.com/version: "1.1"
 spec:
   replicas: 2
   selector:
@@ -11,9 +15,26 @@ spec:
     metadata:
       labels:
         app: nodejs-calculator
+        tags.datadoghq.com/env: "prod"
+        tags.datadoghq.com/service: "nodejs-calculator"
+        tags.datadoghq.com/version: "1.1"
+        admission.datadoghq.com/enabled: "true"
+      annotations:
+        admission.datadoghq.com/js-lib.version: "latest"
     spec:
       containers:
       - name: nodejs-calculator
-        image: hirdeshkumar2407/nodejs-calculator:1.0
+        image: hirdeshkumar2407/nodejs-calculator:latest
         ports:
         - containerPort: 3000
+        env:
+        - name: DD_AGENT_HOST
+          valueFrom:
+            fieldRef:
+              fieldPath: status.hostIP
+        - name: DD_PROFILING_ENABLED
+          value: "true"
+        - name: DD_LOGS_INJECTION
+          value: "true"
+        - name: DD_TRACE_SAMPLE_RATE
+          value: "1"
