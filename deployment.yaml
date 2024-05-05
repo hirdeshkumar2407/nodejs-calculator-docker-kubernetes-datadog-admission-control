@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: nodejs-calculator
 spec:
-  replicas: 2                 # Set number of replicas to 2
+  replicas: 2
   selector:
     matchLabels:
       app: nodejs-calculator
@@ -13,20 +13,21 @@ spec:
         app: nodejs-calculator
     spec:
       containers:
-      - name: nodejs-calculator
-        image: hirdeshkumar2407/nodejs-calculator:latest
-        ports:
-        - containerPort: 3000
+        - name: nodejs-calculator
+          image: hirdeshkumar2407/nodejs-calculator:1.0
+          ports:
+            - containerPort: 3000  # Port on which your Node.js application is listening
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: nodejs-calculator
 spec:
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 3000          # Port exposed by the service on the Kubernetes nodes
+      targetPort: 3000    # Port on which your application is listening inside the container
+      nodePort: 30000     # Port on which the service is exposed on each node (optional)
   selector:
     app: nodejs-calculator
-  ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 3000
-  type: LoadBalancer           # Expose the service as a LoadBalancer
