@@ -11,3 +11,8 @@ spec:
       apiSecret:
         secretName: datadog-secret
         keyName: api-key
+
+  features:
+    apm:
+      enabled: true
+   
