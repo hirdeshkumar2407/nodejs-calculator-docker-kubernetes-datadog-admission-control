@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-calculator
+spec:
+  replicas: 2                 # Set number of replicas to 2
+  selector:
+    matchLabels:
+      app: nodejs-calculator
+  template:
+    metadata:
+      labels:
+        app: nodejs-calculator
+    spec:
+      containers:
+      - name: nodejs-calculator
+        image: hirdeshkumar2407/nodejs-calculator:latest
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejs-calculator
+spec:
+  selector:
+    app: nodejs-calculator
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3000
+  type: LoadBalancer           # Expose the service as a LoadBalancer
