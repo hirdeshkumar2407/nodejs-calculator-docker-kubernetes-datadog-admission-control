@@ -94,10 +94,12 @@ To deploy the Node.js application using Docker:
 ## Kubernetes Deployment (Minikube)
 To deploy the application on Kubernetes using Minikube:
 
-1. Start Minikube (Optional if you are running Kubernetes on Minikube):
+1. Start Minikube (Optional if you are running Kubernetes on Minikube)
+   
 `minikube start`
 
-2. Get all pods related to Kubernetes infrastructure 
+3. Get all pods related to Kubernetes infrastructure
+   
 `kubectl get all --all-namespaces`
 
 
