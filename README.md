@@ -1,4 +1,4 @@
-## Node.js Calculator API Deployed with NodeApp, Docker, and Kubernetes
+## Node.js Calculator API Deployed on NodeApp, Docker, and Kubernetes with datadog admission-control-method. 
 
 This repository contains a Node.js calculator API that is deployed using npm, Docker, and Kubernetes (with Minikube). 
 
@@ -7,6 +7,9 @@ This repository contains a Node.js calculator API that is deployed using npm, Do
 This Node.js app provides a simple calculator API that allows users to perform basic arithmetic operations. It is deployed using npm for local development, Docker for containerization, and Kubernetes (Minikube) for container orchestration.
 
 This repository contains a simple Node.js application that provides a RESTful API for performing basic arithmetic operations. The application is designed to be deployed using Docker containers and Kubernetes (Minikube). Additionally, it includes instructions for integrating with Datadog for monitoring purposes.
+
+Admission control plays a crucial role in ensuring the smooth operation of applications deployed on Kubernetes clusters. By injecting instrumentation libraries and tagging pods, admission control enables comprehensive monitoring and observability, vital for managing complex containerized environments. In this article, we'll explore how DataDog, a leading observability platform, integrates admission control into Kubernetes deployments, focusing on a Node.js application deployment as an example.
+
 
 ## Node.js Application
 The Node.js application exposes several endpoints for arithmetic operations:
@@ -124,8 +127,7 @@ List all the pods created as part of the deployment to monitor their status and 
 `kubectl get pods`
 
 
-## DataDog Addmission Control with NodeJS App Deployment
-Admission control plays a crucial role in ensuring the smooth operation of applications deployed on Kubernetes clusters. By injecting instrumentation libraries and tagging pods, admission control enables comprehensive monitoring and observability, vital for managing complex containerized environments. In this article, we'll explore how DataDog, a leading observability platform, integrates admission control into Kubernetes deployments, focusing on a Node.js application deployment as an example.
+## DataDog Admission Control with NodeJS App Deployment
 
 Start by applying the deployment configuration defined in the deployment.yaml file using the following command:
 
