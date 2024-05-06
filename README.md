@@ -1,4 +1,4 @@
-![image](https://github.com/hirdeshkumar2407/calculator-api-deployed-on-nodejsapp-docker-kubernetes-with-datadog-addmisson-control-method/assets/79218874/111dda53-0737-4731-8c0b-bdf809a551a3)# Node.js Calculator API Deployed with NodeApp, Docker, and Kubernetes
+## Node.js Calculator API Deployed with NodeApp, Docker, and Kubernetes
 
 This repository contains a Node.js calculator API that is deployed using npm, Docker, and Kubernetes (with Minikube). 
 
@@ -139,7 +139,11 @@ List all the pods created as part of the deployment to monitor their status and 
 
 `kubectl get pods`
 
-Expose Deployment as Service: Expose the deployed application as a service to make it accessible externally. Use the following command:
+
+![image](https://github.com/hirdeshkumar2407/calculator-api-deployed-on-nodejsapp-docker-kubernetes-with-datadog-addmisson-control-method/assets/79218874/23d2192f-b7d2-468d-b84a-1cce937aae03)
+
+
+Expose the deployed application as a service to make it accessible externally. Use the following command:
 
 
 `kubectl expose deployment nodejs-calculator --type=NodePort --port=3000`
@@ -156,3 +160,12 @@ Lastly, retrieve the logs of a specific pod to diagnose issues or monitor the ap
 
 Replace nodejs-calculator-684686c6b7-srvsb with the actual name of the pod.
 By following these steps, you can effectively deploy and manage a Node.js application on Kubernetes, utilizing various commands to ensure smooth deployment, monitoring, and debugging processes.
+
+
+Make some curls requests and check the datadog account.
+
+![image](https://github.com/hirdeshkumar2407/calculator-api-deployed-on-nodejsapp-docker-kubernetes-with-datadog-addmisson-control-method/assets/79218874/91e695d4-80d1-4c87-83da-bb537c72a781)
+
+![image](https://github.com/hirdeshkumar2407/calculator-api-deployed-on-nodejsapp-docker-kubernetes-with-datadog-addmisson-control-method/assets/79218874/3114285e-d76a-46d8-9e7c-40a69d7c71f8)
+
+
