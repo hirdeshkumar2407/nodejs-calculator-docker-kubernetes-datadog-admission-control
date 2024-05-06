@@ -1,4 +1,4 @@
-# Node.js Calculator API Deployed with npm, Docker, and Kubernetes
+# Node.js Calculator API Deployed with NodeApp, Docker, and Kubernetes
 
 This repository contains a Node.js calculator API that is deployed using npm, Docker, and Kubernetes (with Minikube). 
 
