@@ -73,7 +73,7 @@ Use curl to interact with the API endpoints. For example:
 
 
 ## Docker Deployment
-(The image is availible in docker hub as well https://hub.docker.com/r/hirdeshkumar2407/nodejs-calculator)
+(The image is available in docker hub as well https://hub.docker.com/r/hirdeshkumar2407/nodejs-calculator)
 To deploy the Node.js application using Docker:
 
 
