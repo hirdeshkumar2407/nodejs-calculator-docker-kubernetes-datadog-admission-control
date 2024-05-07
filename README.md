@@ -49,34 +49,27 @@ npm start
 
 Use curl to interact with the API endpoints. For example:
 
+#### Addition
 
-##### Addition
-`curl -X POST \
-  -H "Content-Type: application/json" \
-  -d '{"a": 5, "b": 3}' \
-  http://localhost:3000/add`
+`curl -X POST -H "Content-Type: application/json" -d '{"a": 5, "b": 3, "op": "add"}' http://localhost:3000`
 
-##### Subtraction
-`curl -X POST \
-  -H "Content-Type: application/json" \
-  -d '{"a": 5, "b": 3}' \
-  http://localhost:3000/subtract`
+#### Multiplication
 
-##### Multiplication
-`curl -X POST \
-  -H "Content-Type: application/json" \
-  -d '{"a": 5, "b": 3}' \
-  http://localhost:3000/multiply`
+`curl -X POST -H "Content-Type: application/json" -d '{"a": 4, "b": 6, "op": "mul"}' http://localhost:3000`
 
-##### Division
-`curl -X POST \
-  -H "Content-Type: application/json" \
-  -d '{"a": 10, "b": 2}' \
-  http://localhost:3000/divide`
+#### Division
+
+`curl -X POST -H "Content-Type: application/json" -d '{"a": 10, "b": 2, "op": "div"}' http://localhost:3000`
+
+#### Subtraction
+
+`curl -X POST -H "Content-Type: application/json" -d '{"a": 8, "b": 3, "op": "sub"}' http://localhost:3000`
 
 
 ## Docker Deployment
+
 (The image is available in docker hub as well https://hub.docker.com/r/hirdeshkumar2407/nodejs-calculator)
+
 To deploy the Node.js application using Docker:
 
 
