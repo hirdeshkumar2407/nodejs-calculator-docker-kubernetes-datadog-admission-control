@@ -110,7 +110,9 @@ To deploy the application on Kubernetes using Minikube:
 By deploying the DataDog agent alongside your applications, you can harness its rich features for metrics, logs, traces, and alerting, all tailored specifically for Kubernetes environments. To get started, you can utilize the following commands:
 
 `helm repo add datadog https://helm.datadoghq.com`
+
 `helm install datadog-operator datadog/datadog-operator`
+
 `kubectl create secret generic datadog-secret --from-literal api-key=Secret-key`
 
 To monitor the Node.js application using DataDog, deploy the DataDog Agent alongside your application. Use the provided YAML configuration to deploy the DataDog Agent to your Kubernetes cluster.
