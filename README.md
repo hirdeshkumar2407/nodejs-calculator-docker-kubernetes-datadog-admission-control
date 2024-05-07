@@ -1,12 +1,12 @@
 ## Node.js Calculator API Deployed on NodeApp, Docker, and Kubernetes with Datadog Admission Control Method. 
 
-This repository contains a Node.js calculator API that is deployed using npm, Docker, and Kubernetes (with Minikube). 
+This repository contains a Node.js calculator API that is deployed using npm, Docker, and Kubernetes (using Minikube). 
 
 ## Overview
 
 This Node.js app provides a simple calculator API that allows users to perform basic arithmetic operations. It is deployed using npm for local development, Docker for containerization, and Kubernetes (Minikube) for container orchestration.
 
-This repository contains a simple Node.js application that provides a RESTful API for performing basic arithmetic operations. The application is designed to be deployed using Docker containers and Kubernetes (Minikube). Additionally, it includes instructions for integrating with Datadog for monitoring purposes.
+This repository contains a simple Node.js application that provides a RESTful API for performing basic arithmetic operations. The application is designed to be deployed using Docker containers and Kubernetes (Minikube). Minikube enables developers to create a local Kubernetes cluster on their machine, providing a dedicated environment for developing, testing, and debugging Kubernetes applications. Additionally, it includes instructions for integrating with Datadog for monitoring purposes.
 
 Admission control plays a crucial role in ensuring the smooth operation of applications deployed on Kubernetes clusters. By injecting instrumentation libraries and tagging pods, admission control enables comprehensive monitoring and observability, vital for managing complex containerized environments. In this article, we'll explore how DataDog, a leading observability platform, integrates admission control into Kubernetes deployments, focusing on a Node.js application deployment as an example.
 
@@ -94,14 +94,14 @@ To deploy the Node.js application using Docker:
 `docker run -d -p 3000:3000 --name calculator nodejs-calculator`
 
 
-## Kubernetes Deployment (Minikube)
+## Kubernetes Deployment 
 To deploy the application on Kubernetes using Minikube:
 
 1. Start Minikube (Optional if you are running Kubernetes on Minikube)
    
 `minikube start`
 
-3. Get all pods related to Kubernetes infrastructure
+2. Get all pods related to Kubernetes infrastructure
    
 `kubectl get all --all-namespaces`
 
@@ -153,10 +153,13 @@ Expose the deployed application as a service to make it accessible externally. U
 
 
 `kubectl expose deployment nodejs-calculator --type=NodePort --port=3000`
-This command exposes the application on a specific port, allowing external access.
+
+This command exposes the application on a specific port, allowing external access. (For all cases except for 
+If you are using Minikube, port forwarding might be necessary to access services running inside the cluster from your local machine. Minikube runs a single-node Kubernetes cluster locally, and it provides a way to access services deployed within the cluster from your local environment).
+
 
 To access the deployed application locally for testing or debugging, set up port forwarding with the following command:
-`kubectl port-forward svc/nodejs-calculator 30371:3000`
+`kubectl port-forward svc/nodejs-calculator 30371:3000` (For MiniKube only)
 
 This command forwards traffic from a local port (30371 in this example) to the application's port on a pod within the Kubernetes cluster.
 
