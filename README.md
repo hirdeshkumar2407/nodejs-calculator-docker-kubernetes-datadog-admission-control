@@ -1,4 +1,6 @@
-## Node.js Calculator Application: Deployed with Docker, Kubernetes, and VM, Monitored by DataDog with Admission Control
+# Node.js Application: Deployed with Docker, Kubernetes, and VM, Monitored by DataDog with Admission Control
+![as](https://github.com/hirdeshkumar2407/nodejs-calculator-docker-kubernetes-datadog-admission-control/assets/79218874/3a1ecb2f-f5c3-4167-9d0b-36b15d375b52)
+
 
 This repository contains a Node.js calculator API that is deployed using npm, Docker, and Kubernetes (using Minikube). 
 
