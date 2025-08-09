@@ -1,25 +1,18 @@
-# Node.js Application: Deployed with Docker, Kubernetes, and VM, Monitored by DataDog with Admission Control
+# 🚀 Full-Stack DevOps: A Node.js API with Docker, Kubernetes & Datadog Monitoring
 ![as](https://github.com/hirdeshkumar2407/nodejs-calculator-docker-kubernetes-datadog-admission-control/assets/79218874/3a1ecb2f-f5c3-4167-9d0b-36b15d375b52)
+ 
+
+## 🎯 Project Mission
+This project is a comprehensive, end-to-end demonstration of modern DevOps and MLOps principles. The goal was to not just build a simple Node.js application, but to architect a complete, production-ready ecosystem around it.
+This includes containerization with Docker, orchestration with Kubernetes, and implementing advanced, real-time observability using a Datadog Admission Controller. It's a practical case study in building, deploying, and monitoring a scalable and resilient microservice in a cloud-native environment.
 
 
-This repository contains a Node.js calculator API that is deployed using npm, Docker, and Kubernetes (using Minikube). 
 
-## Overview
-
-This Node.js app provides a simple calculator API that allows users to perform basic arithmetic operations. It is deployed using npm for local development, Docker for containerization, and Kubernetes (Minikube) for container orchestration.
-
-This repository contains a simple Node.js application that provides a RESTful API for performing basic arithmetic operations. The application is designed to be deployed using Docker containers and Kubernetes (Minikube). Minikube enables developers to create a local Kubernetes cluster on their machine, providing a dedicated environment for developing, testing, and debugging Kubernetes applications. Additionally, it includes instructions for integrating with Datadog for monitoring purposes.
-
-Admission control plays a crucial role in ensuring the smooth operation of applications deployed on Kubernetes clusters. By injecting instrumentation libraries and tagging pods, admission control enables comprehensive monitoring and observability, vital for managing complex containerized environments. In this article, we'll explore how DataDog, a leading observability platform, integrates admission control into Kubernetes deployments, focusing on a Node.js application deployment as an example.
-
-
-## Node.js Application
-The Node.js application exposes several endpoints for arithmetic operations:
-
-- `/add`: Adds two numbers.
-- `/subtract`: Subtracts one number from another.
-- `/multiply`: Multiplies two numbers.
-- `/divide`: Divides one number by another.
+## ✨ Core Features & Technologies
+- Application: A RESTful API for arithmetic operations, built with Node.js.
+- Containerization: Fully containerized using Docker for portability and consistency. The image is publicly available on Docker Hub.
+- Orchestration: Deployed on a local Kubernetes cluster (Minikube) for scalable management.
+- Observability: Integrated with a Datadog Agent and Admission Controller to provide comprehensive, real-time monitoring of metrics, logs, and application performance.
 
 ## Getting Started
 
